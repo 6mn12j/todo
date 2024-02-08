@@ -1,5 +1,8 @@
+import styled from 'styled-components';
+
+const Wrapper = styled.div``;
 function Home() {
-  return <h1>Hello World</h1>;
+  return <Wrapper>Hello World</Wrapper>;
 }
 
 export default Home;
