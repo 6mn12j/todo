@@ -22,6 +22,9 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier', 'import'],
   rules: {
     'react/react-in-jsx-scope': 0,
+    'no-param-reassign': 0,
+    'no-shadow': 0,
+    '@typescript-eslint/no-shadow': ['off'],
     'import/order': [
       'error',
       {
@@ -62,7 +65,7 @@ module.exports = {
             position: 'after',
           },
         ],
-        pathGroupsExcludedImportTypes: ['react',],
+        pathGroupsExcludedImportTypes: ['react'],
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
