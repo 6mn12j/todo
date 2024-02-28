@@ -9,6 +9,11 @@ function TodoInput() {
   const dispatch = useAppDispatch();
   const [title, setTitle] = useState('');
 
+  const submitTodo = () => {
+    dispatch(addTodo(title));
+    setTitle('');
+  };
+
   return (
     <Wrapper>
       <input
@@ -16,13 +21,7 @@ function TodoInput() {
         onChange={(e) => setTitle(e.currentTarget.value)}
         type="text"
       />
-      <button
-        type="button"
-        onClick={() => {
-          dispatch(addTodo(title));
-          setTitle('');
-        }}
-      >
+      <button type="button" onClick={submitTodo}>
         ADD
       </button>
     </Wrapper>
